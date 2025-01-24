@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Artykuły</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        // Pobranie wszystkich tytuły artykułów
+        const titles = document.querySelectorAll(".article-title");
+
+        titles.forEach(title => {
+            // Zdarzenie kliknięcia
+            title.addEventListener("click", () => {
+                // Znajdź powiązaną zawartość artykułu
+                const content = title.nextElementSibling;
+
+                // Rozwiń/zwiń artykuł
+                if (content.style.display === "block") {
+                    content.style.display = "none"; // Ukryj treść
+                } else {
+                    content.style.display = "block"; // Pokaż treść
+                }
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+    <section class="container">
+        <header>
+            <h1>Artykuły o Cyberpunku</h1>
+            <nav>
+                <a href="index.html">Strona Główna</a>
+                <a href="gallery.html">Galeria</a>
+                <a href="articles.html">Artykuły</a>
+                <a href="contact.html">Kontakt</a>
+            </nav>
+        </header>
+        <main>
+            <h2>Eksploruj Świat Cyberpunku</h2>
+            <section class="article">
+                <h3 class="article-title">Cyberpunk 2077 - Gra Przełomowa</h3>
+                <div class="article-content">
+                    <p>Cyberpunk 2077 to kultowa gra RPG osadzona w futurystycznym Night City.
+                    Oferuje niesamowitą grafikę, głęboką fabułę i ogromny świat.</p>
+                </div>
+            </section>
+            <section class="article">
+                <h3 class="article-title">Główne Motywy Cyberpunku</h3>
+                <div class="article-content">
+                    <p>Cyberpunk bada tematy takie jak zaawansowana technologia,
+                    zmiany społeczne, konflikty między człowiekiem a maszyną oraz cybernetyczna przyszłość.</p>
+                </div>
+            </section>
+            <section class="article">
+                <h3 class="article-title">Kultowe Filmy Cyberpunkowe</h3>
+                <div class="article-content">
+                    <p>Filmy takie jak Blade Runner czy Ghost in the Shell
+                    wyznaczają standardy dla wizualnych interpretacji świata cyberpunku.</p>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 28486_28724</p>
+        </footer>
+    </section>
+</body>
+</html>

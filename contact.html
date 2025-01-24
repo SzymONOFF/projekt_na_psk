@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Funkcja wyświetlająca alert
+        function showAlert() {
+            alert("Serwer jest w budowie. Obecnie nie można wysłać wiadomości. Spróbuj ponownie później.");
+        }
+    </script>
+</head>
+<body>
+    <section class="container">
+        <header>
+            <h1>Skontaktuj się z nami</h1>
+            <nav>
+                <a href="index.html">Strona Główna</a>
+                <a href="gallery.html">Galeria</a>
+                <a href="articles.html">Artykuły</a>
+                <a href="contact.html">Kontakt</a>
+            </nav>
+        </header>
+        <main>
+            <h2>Formularz kontaktowy</h2>
+            <form class="contact-form">
+                <label for="name">Imię:</label>
+                <input type="text" id="name" name="name" placeholder="Wpisz swoje imię" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Wpisz swój email" required>
+
+                <label for="message">Wiadomość:</label>
+                <textarea id="message" name="message" placeholder="Wpisz swoją wiadomość" rows="5" required></textarea>
+
+                <input type="submit" onclick="showAlert()">
+            </form>
+        </main>
+        <footer>
+            <p>&copy; 2025 28486_28724</p>
+        </footer>
+    </section>
+</body>
+</html>

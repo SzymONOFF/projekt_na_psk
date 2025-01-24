@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Funkcja otwierająca okno modalne
+        function otworzOkno(obraz) {
+            const oknoModalne = document.getElementById("oknoModalne");
+            const obrazModalny = document.getElementById("obrazModalny");
+            oknoModalne.style.display = "flex"; // Pokaż okno modalne
+            obrazModalny.src = obraz.src; // Ustaw źródło obrazu w oknie
+        }
+
+        // Funkcja zamykająca okno modalne
+        function zamknijOkno() {
+            const oknoModalne = document.getElementById("oknoModalne");
+            oknoModalne.style.display = "none"; // Ukryj okno modalne
+        }
+    </script>
+</head>
+<body>
+    <section class="container">
+        <header>
+            <h1>Galeria Cyberpunkowa</h1>
+            <nav>
+                <a href="index.html">Strona Główna</a>
+                <a href="gallery.html">Galeria</a>
+                <a href="articles.html">Artykuły</a>
+                <a href="contact.html">Kontakt</a>
+            </nav>
+        </header>
+        <section class="main">
+            <h2>Przeglądaj naszą kolekcję</h2>
+            <div class="galeria">
+                <img src="zasoby/obrazy/img1.jpeg" alt="Zdjęcie Cyberpunk 1" onclick="otworzOkno(this)">
+                <img src="zasoby/obrazy/img2.jpeg" alt="Zdjęcie Cyberpunk 2" onclick="otworzOkno(this)">
+                <img src="zasoby/obrazy/img3.jpeg" alt="Zdjęcie Cyberpunk 3" onclick="otworzOkno(this)">
+                <img src="zasoby/obrazy/img4.jpeg" alt="Zdjęcie Cyberpunk 4" onclick="otworzOkno(this)">
+                <img src="zasoby/obrazy/img5.jpeg" alt="Zdjęcie Cyberpunk 5" onclick="otworzOkno(this)">
+                <img src="zasoby/obrazy/img6.jpeg" alt="Zdjęcie Cyberpunk 6" onclick="otworzOkno(this)">
+                <img src="zasoby/obrazy/img7.jpeg" alt="Zdjęcie Cyberpunk 7" onclick="otworzOkno(this)">
+                <img src="zasoby/obrazy/img8.jpeg" alt="Zdjęcie Cyberpunk 8" onclick="otworzOkno(this)">
+            </div>
+
+            <div class="okno-modalne" id="oknoModalne" onclick="zamknijOkno()">
+                <img id="obrazModalny" src="" alt="Pełnoekranowy obraz">
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2025 28486_28724</p>
+        </footer>
+    </section>
+</body>
+</html>
